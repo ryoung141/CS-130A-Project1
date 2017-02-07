@@ -6,6 +6,8 @@ class Fix:public Event{
         Fix(int time, int target);
         ~Fix();
 
+        bool f_probe(int target);
+
     protected:
         int target;
 };

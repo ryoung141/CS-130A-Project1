@@ -7,5 +7,8 @@ class Sysadmin{
         ~Sysadmin();    //Destructor
 
         void Q_Fix(int time, int source, int target);   //if source == -1, then the source is the attacker
-        
+        void recieveNotify(Notify n);                   //recieves notification from IDS
+
+    protected:
+        Notify n;
 };

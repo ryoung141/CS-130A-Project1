@@ -6,6 +6,8 @@ class Notify:public Event{
         Notify(int time, Attack a);
         ~Notify();
 
+        bool n_probe(Sysadmin s);
+
     protected:
         Attack a;
 };
