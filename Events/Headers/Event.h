@@ -11,5 +11,5 @@ class Event{
         void setPosition(int position);
 
     protected:
-        int time;
+        int t;
 };

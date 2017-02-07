@@ -11,6 +11,6 @@ class Attack:public Event{
         int getTarget();            //used when determining target for notify and fix
 
     protected:
-        int source;
-        int target;
+        int s;
+        int tg;
 };
