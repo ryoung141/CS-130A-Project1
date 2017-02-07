@@ -1,0 +1,7 @@
+Needs:
+Event Priority Queue ADT Class
+Actual events (attack(time,source,target), fix(time,target), notify(time,attack))
+Agent Classes (Computer, IDS, Attacker, Sysadmin)
+Agent tree
+    IDS is root, two children as switches, then the rest of the CPUs
+Time from ctime?
