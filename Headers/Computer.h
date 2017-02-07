@@ -3,13 +3,13 @@
 
 class Computer{
     public:
-        Computer(int name, int chanceOfSuccess);     //Constructor
+        Computer(int name);     //Constructor
         ~Computer();    //Destructor
 
         void Q_Attack(int time, int source, int target);
         
         bool getStatus();
-        void setStatus();
+        void setStatus(bool isCompromised);
         int getName();
 
     protected:

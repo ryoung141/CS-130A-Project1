@@ -4,7 +4,7 @@
 
 class Attacker{
     public:
-        Attacker(int chanceOfSuccess);     //Constructor
+        Attacker();     //Constructor
         ~Attacker();                       //Destructor
 
         void Q_Attack(int time, int source, int target);
