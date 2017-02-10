@@ -1,5 +1,12 @@
 // PriorityQueue.cpp
 // Richard Young 2/2017
+#include <string>
+#include <iostream>
+
+struct Event {
+    int time;
+    string type;
+}
 
 class PriorityQueue{
     public:
@@ -11,6 +18,11 @@ class PriorityQueue{
         PriorityQueue(int size){
             counter = 0;
             ptr = new Event[size];
+        }
+        PriorityQueue(int size, bool testing){
+            counter = 0;
+            ptr = new Event[size];
+            debug = testing;
         }
         ~PriorityQueue(){
             counter = 0;
@@ -44,17 +56,32 @@ class PriorityQueue{
             percolateDown(ptr[1], 1);
         }
         void percolateUp(Event e, int currentPos){
-            if (e.getPosition() < ptr[currentPos/2].getPosition()){
-                Event * tmp = ptr[currentPos/2]
-                ptr[currentPos/2] = e;
-                ptr[currentPos] = *tmp;
-                delete tmp;
-                percolateUp(e, currentPos/2);
+            if (debug = false){
+                if (e.getPosition() < ptr[currentPos/2].getPosition()){
+                    Event * tmp = ptr[currentPos/2]
+                    ptr[currentPos/2] = e;
+                    ptr[currentPos] = *tmp;
+                    delete tmp;
+                    percolateUp(e, currentPos/2);
+                }
+                else{  
+                    break;
+                }
             }
-            else{
-                break;
+            if (debug = true){
+                if (e.time < ptr[currentPos/2].time){
+                    Event * tmp = ptr[currentPos/2]
+                    ptr[currentPos/2] = e;
+                    ptr[currentPos] = *tmp;
+                    delete tmp;
+                    percolateUp(e, currentPos/2);
+                }
+                else{  
+                    break;
+                }
             }
         }
+        
         void percolateDown(Event e, int currentPos){
             if (e.getPosition() > ptr[currentPos * 2]){
                 Event * tmp = ptr[currentPos * 2];
@@ -79,5 +106,6 @@ class PriorityQueue{
         int size;
         Event * ptr;
         int counter;
+        bool debug;
         //ptr = new Event [size];
 };

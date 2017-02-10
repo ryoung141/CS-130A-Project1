@@ -10,8 +10,6 @@ class Event{
         int getPosition();
         string getType();
         void setPosition(int position);
-
-    protected:
-        int time;
+        int t;
         string type;
 };

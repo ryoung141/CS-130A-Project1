@@ -12,9 +12,10 @@ class Computer{
         bool getStatus();                                   
         void setStatus(bool isCompromised);
         int getName();
+        bool isCompromised;
+
 
     protected:
-        bool isCompromised;
         int name;
         int chanceOfSuccess         //determined by Percent_success in environment
         Attack a;
