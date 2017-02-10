@@ -8,6 +8,7 @@ Attack::Attack(int time, int source, int target){
     t = time;
     s = source;
     tg = target;
+    type = "attack";
 }
 
 int Attack::getSource(){

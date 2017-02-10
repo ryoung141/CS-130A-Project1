@@ -8,8 +8,10 @@ class Event{
         ~Event();
 
         int getPosition();
+        string getType();
         void setPosition(int position);
 
     protected:
-        int t;
+        int time;
+        string type;
 };
