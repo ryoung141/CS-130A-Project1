@@ -1,6 +1,9 @@
 // Fix.h
 // Richard Young 2/2017
 
+#ifndef FIX_H
+#define FIX_H
+
 #include "Event.h"
 
 class Fix:public Event{
@@ -13,3 +16,5 @@ class Fix:public Event{
     protected:
         int tgt;
 };
+
+#endif

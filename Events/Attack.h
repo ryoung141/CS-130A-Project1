@@ -1,10 +1,15 @@
 // Attack.h
 // Richard Young 2/2017
+
+#ifndef ATTACK_H
+#define ATTACK_H
+
 #include "Event.h"
 //#include "Event.cpp"
 
 class Attack:public Event{
     public:
+		Attack();
         Attack(int time, int source, int target);
         ~Attack();
 
@@ -16,3 +21,5 @@ class Attack:public Event{
         int s;
         int tg;
 };
+
+#endif
