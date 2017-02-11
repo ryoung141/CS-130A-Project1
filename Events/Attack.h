@@ -16,6 +16,10 @@ class Attack:public Event{
         bool a_probe(int target);   //attacks target
         int getSource();            //used when determining source for notify and fix
         int getTarget();            //used when determining target for notify and fix
+		
+	int getPosition();
+	string getType();
+	void setPosition(int time);
 
     protected:
         int s;

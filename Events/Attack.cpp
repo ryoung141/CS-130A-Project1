@@ -1,8 +1,12 @@
 // Attack.cpp
 // Richard Young 2/2017
 
+#ifndef ATTACK_CPP
+#define ATTACK_CPP
+
 #include <iostream>
 #include "Attack.h"
+#include "../Queue/PriorityQueue.cpp"
 
 Attack::Attack(){
 	t = 0;
@@ -18,15 +22,15 @@ Attack::Attack(int time, int source, int target){
     type = "attack";
 }
 
-int Event::getPosition(){
+int Attack::getPosition(){
 	return t;
 }
 
-string Event::getType(){
+string Attack::getType(){
 	return type;
 }
 
-void Event::setPosition(int time){
+void Attack::setPosition(int time){
 	t = time;
 }
 
@@ -41,3 +45,5 @@ int Attack::getTarget(){
 bool Attack::a_probe(int target){
 		return true;
 }
+
+#endif

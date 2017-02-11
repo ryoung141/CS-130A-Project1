@@ -1,9 +1,12 @@
 // Computer.cpp
 // Richard Young 2/2017
 
+#ifndef COMPUTER_CPP
+#define COMPUTER_CPP
+
 #include "Computer.h"
 #include "../Events/Attack.cpp"
-#include "../Queue/PriorityQueue.cpp"
+//#include "../Queue/PriorityQueue.cpp"
 
 
 Computer::Computer(int n){
@@ -13,9 +16,9 @@ Computer::Computer(int n){
 
 Computer::~Computer(){}
 
-Event Computer::Q_Attack(int time, int source, int target){
-	Attack out_going(int time, int source, int target);
-	return out_going
+Attack* Computer::Q_Attack(int time, int source, int target){
+	Attack * rtrn = new Attack(time, source, target);
+	return rtrn;
 }
 
 bool Computer::getStatus(){
@@ -29,3 +32,5 @@ void Computer::setStatus(bool status){
 int Computer::getName(){
 	return name;
 }
+
+#endif

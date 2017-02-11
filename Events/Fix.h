@@ -10,6 +10,10 @@ class Fix:public Event{
     public:
         Fix(int time, int target);
         ~Fix();
+		
+		void setPosition(int time);
+		string getType();
+		int getPosition();
 
         bool f_probe(int target);
 

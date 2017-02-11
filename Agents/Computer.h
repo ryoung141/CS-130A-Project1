@@ -12,7 +12,7 @@ class Computer{
         Computer(int n);     //Constructor
         ~Computer();    //Destructor
 
-        Event Q_Attack(int time, int source, int target);    //queues an attack
+        Attack* Q_Attack(int time, int source, int target);    //queues an attack
         //void recieveAttack(Attack a);                       //recieves attack from elsewhere
         
         bool getStatus();                                   

@@ -47,6 +47,7 @@ class PriorityQueue{
             }
             else if (ptr[1].getType() == "notify"){
                 //get source and target of the attack within notify, send notification to IDS
+				//call underAttack
             }
             else if (ptr[1].getType() == "fix"){
                 //fix source and target

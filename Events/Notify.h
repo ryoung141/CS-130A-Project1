@@ -4,12 +4,16 @@
 #ifndef NOTIFY_H
 #define NOTIFY_H
 
+#include "Event.h"
+#include "Attack.h"
+#include "Attack.cpp"
+
 class Notify:public Event{
     public:
-        Notify(int time, Attack a);
+        Notify(int time, Attack atk);
         ~Notify();
 
-        bool n_probe(Sysadmin s);
+        //bool n_probe(Sysadmin s);
 
     protected:
         Attack a;
