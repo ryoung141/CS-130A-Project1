@@ -11,6 +11,8 @@ Attack::Attack(int time, int source, int target){
     type = "attack";
 }
 
+
+
 int Attack::getSource(){
     return s;
 }
@@ -20,5 +22,5 @@ int Attack::getTarget(){
 }
 
 bool Attack::a_probe(int target){
-        
+		return true;
 }

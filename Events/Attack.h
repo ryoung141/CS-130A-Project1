@@ -1,7 +1,9 @@
 // Attack.h
 // Richard Young 2/2017
+#include "Event.h"
+//#include "Event.cpp"
 
-class Attack: public Event{
+class Attack:public Event{
     public:
         Attack(int time, int source, int target);
         ~Attack();

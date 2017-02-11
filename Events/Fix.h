@@ -1,6 +1,8 @@
 // Fix.h
 // Richard Young 2/2017
 
+#include "Event.h"
+
 class Fix:public Event{
     public:
         Fix(int time, int target);
@@ -9,5 +11,5 @@ class Fix:public Event{
         bool f_probe(int target);
 
     protected:
-        int target;
+        int tgt;
 };
